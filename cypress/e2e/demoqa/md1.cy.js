@@ -1,5 +1,5 @@
 describe('md1', () => {
     it('passes', () => {
-        cy.visit();
+        cy.visit('https://example.cypress.io');
     })
 })
