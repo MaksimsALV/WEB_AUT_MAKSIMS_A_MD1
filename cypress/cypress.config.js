@@ -6,7 +6,6 @@ module.exports = defineConfig({
   viewportHeight: 1400,
   e2e: {
     setupNodeEvents(on, config) {
-      // node listeners
     },
     baseUrl: 'https://demoqa.com'
   },
