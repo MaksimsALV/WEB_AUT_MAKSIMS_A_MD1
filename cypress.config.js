@@ -6,6 +6,12 @@ module.exports = defineConfig({
   viewportHeight: 1400,
   e2e: {
     setupNodeEvents(on, config) {
+      on('task', {
+        log(message) {
+          console.log(message)
+          return null
+        }
+      })
     },
     baseUrl: 'https://demoqa.com'
   },
