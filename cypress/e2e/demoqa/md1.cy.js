@@ -8,15 +8,19 @@ describe('md1 - Maksims A', () => {
             SelectablePage.visit();
         });
 
+        afterEach(function () {
+            cy.task('log', 'test result state: ' + this.currentTest.state)
+        });
+
         it('a). open selectable page', () => {
-            cy.contains('Selectable')
+            SelectablePage.pageTitle.should('contain.text', 'Selectable');
         });
 
         it('b). click grid tab', () => {
             GridTab.clickOnGrid()
         });
 
-        it('c). click one, two..', () => {
+        it('c). click one, two.. etc', () => {
             GridTab.clickOnGrid()
             GridTab.clickOnItem('Two')
             GridTab.clickOnItem('Four')
