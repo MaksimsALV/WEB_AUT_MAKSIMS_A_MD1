@@ -24,11 +24,6 @@ describe('md1 - Maksims A', () => {
             cy.contains('Six').should('have.class', 'active')
             cy.contains('Eight').should('have.class', 'active')
 
-            GridTab.clickOnItem('Two')
-            GridTab.clickOnItem('Four')
-            GridTab.clickOnItem('Six')
-            GridTab.clickOnItem('Eight')
-
             cy.contains('One').should('not.have.class', 'active')
             cy.contains('Three').should('not.have.class', 'active')
             cy.contains('Five').should('not.have.class', 'active')
